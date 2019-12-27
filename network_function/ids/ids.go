@@ -4,7 +4,6 @@ import (
 	"fmt"
 	networkfunction "sfc_platform/network_function"
 	"strconv"
-	"strings"
 	"utilities"
 )
 
@@ -34,9 +33,6 @@ func (ids IDS) ProcessPacket(packet string) /*string*/ {
 
 	Detection := false
 
-	if strings.Contains(packet, "10") {
-		Detection = true
-	}
 	if Detection {
 		ids.DetectMalware()
 	}
