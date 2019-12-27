@@ -1,0 +1,11 @@
+sfc:
+  chain: 
+    - "firewall1"
+    - "ids1"
+  network_functions_info: 
+    - name_of_function: "test_firewall_1"
+      type_of_function: "firewall"
+    - name_of_function: "test_ids_1"
+      type_of_function: "ids"
+    - name_of_function: "test_ids_2"
+      type_of_function: "ids"
