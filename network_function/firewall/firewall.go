@@ -5,24 +5,24 @@ import (
 	networkfunction "sfc_platform/network_function"
 )
 
-// TestFirewall is struct for snort
+// TestFirewall is struct for Firewall
 type Firewall struct {
 	name string
 	next networkfunction.INetworkFunction
 }
 
-// NewTestFirewall creates a new Person.
+// NewTestFirewall creates a new Firewall.
 func NewFirewall(name string, next networkfunction.INetworkFunction) Firewall {
 	return Firewall{name, next}
 }
 
-// AddRule is for adding rule in Snort IDS
+// AddRule is for adding rule in Firewall
 func (tf Firewall) AddRule(ip string) (err error) {
 	fmt.Printf("%s is Adding a Rule.\n", tf.name)
 	return nil
 }
 
-//Run runs snort ids
+//Run runs Firewall
 func (tf Firewall) Run() (pid int, err error) {
 	fmt.Printf("%s is Run.\n", tf.name)
 
@@ -31,13 +31,13 @@ func (tf Firewall) Run() (pid int, err error) {
 	return
 }
 
-//Kill kills snort ids
+//Kill kills Firewall
 func (tf Firewall) Kill() (pid int, err error) {
 	fmt.Printf("%s is Kill.\n", tf.name)
 	return 10, nil
 }
 
-// ClearPolicies implemetation for snort ids
+// ClearPolicies implemetation for Firewall
 func (tf Firewall) ClearPolicies() (err error) {
 	fmt.Printf("%s is Clearing Policies.\n", tf.name)
 
@@ -54,12 +54,12 @@ func (tf Firewall) ProcessPacket(packet string) /*string*/ {
 	}
 }
 
-//Kill kills snort ids
+//Kill kills Firewall
 func (tf Firewall) ApplyAction() {
 	return
 }
 
-//Kill kills snort ids
+//Kill kills Firewall
 func (tf Firewall) DecisionMaking() []networkfunction.Action {
 	var temp []networkfunction.Action
 	return temp
