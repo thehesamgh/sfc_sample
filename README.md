@@ -1,5 +1,5 @@
 # Service Function Chaining (SFC) sample in Golang
-This is a simple way that you can create Service Function Chaining (SFC) using Chain of Responsibilitys design pattern in Golang.
+This is a simple way that you can create Service Function Chaining (SFC) using Chain of Responsibilities design pattern in Golang.
 
 ## sample config file (YAML)
 ```yaml
